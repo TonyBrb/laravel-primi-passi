@@ -22,6 +22,22 @@
       </li>
     </ul>
   </div>
+  <div class="container">
+   <h2>I film di {{ $name }} sono:</h2>
+        <ul>
+
+            @foreach ($films as $film )
+                @if ($loop->first)
+                    <strong>
+                @endif
+                <li>
+                    {{ $film }}
+                </li>
+                @if ($loop->first)
+                    </strong>
+                @endif
+            @endforeach
+  </div>
   
 </body>
 </html>

@@ -14,7 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $data = [
+        'name' => 'Leonardo Di Caprio',
+        'films' => [
+            "Inception",
+            "Shutter island",
+            "Titanic",
+            "The walf of wall street"
+        ]
+    ];
+    return view('home', $data);
 })->name('home');
 
 Route::get('/contacts', function (){
